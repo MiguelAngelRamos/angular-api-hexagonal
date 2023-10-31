@@ -1,0 +1,52 @@
+<div class="container mt-5">
+  <h1 class="text-center">Inicie su sesión</h1>
+  <div class="row mt-5">
+    <div class="col-4 offset-4">
+      <form [formGroup]="forma" (ngSubmit)="login()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Ingrese su correo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            formControlName="username"
+          />
+          <small class="text-danger" *ngIf="correoNoValido">
+            Ingrese un correo valido
+          </small>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Ingrese su contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            formControlName="password"
+          />
+          <small class="text-danger" *ngIf="passNoValido">
+            Contraseña no valida
+          </small>
+        </div>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-success">Acceder</button>
+        </div>
+
+
+        <!-- <div *ngIf="messageError.length > 0" class="mt-5 text-center alert alert-danger" role="alert">
+          {{messageError}}
+        </div> -->
+
+      </form>
+       <pre>
+        Estado del formulario: {{ forma.valid }}
+        <br>
+        Status: {{ forma.status }}
+      </pre>
+
+      <pre>
+        {{ forma.value | json }}
+      </pre>
+    </div>
+  </div>
+</div>

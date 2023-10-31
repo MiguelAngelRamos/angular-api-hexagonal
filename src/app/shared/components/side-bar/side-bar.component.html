@@ -1,0 +1,28 @@
+<div class="side-bar">
+  <h3 class="text-center mt-5 mb-5">API REST</h3>
+
+  <ul class="side-bar__list">
+    <li>
+      <div class="list-wrapper-item">
+        <i class="fa-solid fa-house-user mx-4"></i>
+        <a class="side-bar__list list-label" routerLink="/usuarios">Usuarios</a>
+      </div>
+    </li>
+
+    <li class="my-4">
+      <div class="list-wrapper-item">
+        <i class="fa-solid fa-users mx-4 "></i>
+        <a class="side-bar__list list-label" routerLink="/create-user">Crear Usuario</a>
+      </div>
+    </li>
+
+    <li class="my-4">
+      <div class="list-wrapper-item">
+        <i class="fa-solid fa-right-from-bracket mx-4"></i>
+        <a class="side-bar__list list-label" (click)="cerrarSession()">Cerrar Session</a>
+      </div>
+    </li>
+
+  </ul>
+  <div class="side-bar__separator"></div>
+</div>

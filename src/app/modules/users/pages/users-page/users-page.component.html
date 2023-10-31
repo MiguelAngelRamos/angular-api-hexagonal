@@ -1,0 +1,40 @@
+<div class="users-page">
+  <div class="user-info">
+    <span>{{ userData.username | uppercase }}  - {{userData.role}}</span>
+    <img [src]="userImage" alt="{{ userData.username }}" class="user-image">
+  </div>
+  <h2 class="text-center mt-5">Listado de Estudiantes</h2>
+  <div class="container mt-5">
+    <!-- Tabla -->
+    <table class="table table-dark table-hover">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="listado-clientes">
+          <!-- row = fila -->
+        <tr *ngFor="let user of usersHtml">
+          <td>{{ user.name }}</td>
+          <td>{{ user.age }}</td>
+          <td>
+            <i
+              class="text-success fa-solid fa-pen-to-square mx-3"
+              (click)="updatedUser(user?.id)"
+            ></i>
+            <i
+              class="text-danger fa-solid fa-trash"
+              (click)="deleteUser(user?.id)"
+              ></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- control + a seleccionar todo
+control + k + f -->

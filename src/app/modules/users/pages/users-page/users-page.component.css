@@ -1,0 +1,18 @@
+.users-page {
+  /* padding: 1rem; 16px */
+  padding: 1rem;
+}
+
+.user-info {
+  display: flex;
+  justify-content: flex-end; /* Alinea los elementos al lado derecho */
+  align-items: center;       /* Centra verticalmente los elementos */
+  margin-bottom: 20px;
+}
+
+.user-image {
+  width: 50px;               /* O el tamaño que desees */
+  height: 50px;
+  border-radius: 50%;        /* Hace que la imagen sea redondeada */
+  margin-left: 10px;         /* Espacio entre el texto y la imagen */
+}
